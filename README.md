@@ -21,6 +21,6 @@ package main
 import "github.com/etelej/rproxy"
 
 func main() {
-    rproxy.Run(":8081", "etelej.com", "https")
+    rproxy.Run(":8081", "https", "etelej.com")
 }
 ```

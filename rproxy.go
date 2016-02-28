@@ -1,13 +1,9 @@
 /*
 Package rproxy is a simple single host http reverse proxy.
 
-Usage:
+Usage of rproxy:
 
-   rproxy.Run(listenAddr,scheme,remoteHost)
-
-Example:
-
-   rproxy.Run(":8081","https","dev.etelej.com")
+   rproxy.Run(":8081","https","etelej.com")
 
 rproxy was written by Peter Etelej <peter@etelej.com>
 */
@@ -20,7 +16,7 @@ import (
 )
 
 // Run launches a reverse proxy listening on a specified port
-func Run(listenAddr, remoteHost, scheme string) {
+func Run(listenAddr, scheme, remoteHost string) {
 	http.HandleFunc("/",
 		func(w http.ResponseWriter, r *http.Request) {
 			p := httputil.NewSingleHostReverseProxy(&url.URL{
