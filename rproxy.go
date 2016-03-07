@@ -3,7 +3,18 @@ Package rproxy is a simple single host http reverse proxy.
 
 Usage of rproxy:
 
+Get the package
+
+   go get -u github.com/peteretelej/rproxy
+
+Import into your application:
+
+   import "github.com/peteretelej/rproxy"
+
+Launch rproxy via the Run function:
+
    rproxy.Run(":8081","https","etelej.com")
+
 
 rproxy was written by Peter Etelej <peter@etelej.com>
 */
